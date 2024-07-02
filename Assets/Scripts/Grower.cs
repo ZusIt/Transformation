@@ -6,7 +6,7 @@ public class Grower : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    void Update()
+    private void Update()
     {
         var scale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         
