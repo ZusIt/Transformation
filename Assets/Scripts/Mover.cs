@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
     private void Update()
     {
-        var nextPosition = transform.position;
-        var direction = transform.forward;
+        Vector3 nextPosition = transform.position;
+        Vector3 direction = transform.forward;
 
-        nextPosition.z += 0.75f * Time.deltaTime;
+        float speed = 0.75f;
+
         nextPosition += direction * Time.deltaTime;
+        nextPosition.z += speed * Time.deltaTime;
 
         transform.position = nextPosition;
     }
